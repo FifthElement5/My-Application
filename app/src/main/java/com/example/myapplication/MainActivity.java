@@ -37,6 +37,18 @@ public class MainActivity extends AppCompatActivity {
         }
     };
 
+    View.OnClickListener sluchaczOperacji = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Button b = (Button) v;
+            String znak = b.getText().toString();
+
+            String obecnyText = ekran.getText().toString();
+            ekran.setText(obecnyText + " " + znak + " ");
+        }
+    };
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -76,6 +88,15 @@ public class MainActivity extends AppCompatActivity {
         btn9.setOnClickListener(sluchaczCyfr);
         btn0.setOnClickListener(sluchaczCyfr);
 
+       Button  btnPlus = findViewById(R.id.button20);
+       Button btnMinus = findViewById(R.id.button16);
+       Button btnMno = findViewById(R.id.button12);
+       Button btnDzie = findViewById(R.id.button8);
+
+       btnPlus.setOnClickListener(sluchaczOperacji);
+       btnMinus.setOnClickListener(sluchaczOperacji);
+       btnMno.setOnClickListener(sluchaczOperacji);
+       btnDzie.setOnClickListener(sluchaczOperacji);
 
 
 //        Button btn8 = findViewById(R.id.button10);
