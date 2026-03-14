@@ -83,6 +83,13 @@ public class MainActivity extends AppCompatActivity {
         }
     };
 
+    View.OnClickListener sluchaczClear = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            ekran.setText("0");
+        }
+    };
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -132,6 +139,12 @@ public class MainActivity extends AppCompatActivity {
        btnMinus.setOnClickListener(sluchaczOperacji);
        btnMno.setOnClickListener(sluchaczOperacji);
        btnDzie.setOnClickListener(sluchaczOperacji);
+
+       Button btnRowne = findViewById(R.id.button24);
+       Button btnClear = findViewById(R.id.button4);
+
+       btnRowne.setOnClickListener(sluchaczWyniku);
+       btnClear.setOnClickListener(sluchaczClear);
 
 
 //        Button btn8 = findViewById(R.id.button10);
