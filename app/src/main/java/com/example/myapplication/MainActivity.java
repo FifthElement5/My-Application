@@ -13,6 +13,8 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
 
+    TextView ekran;
+
 
 
     View.OnClickListener sluchaczCyfr = new View.OnClickListener() {
@@ -46,8 +48,10 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
+        // polączenie z xml
+         ekran = findViewById(R.id.result_tv);
 
-        TextView ekran = findViewById(R.id.result_tv);
+         Button btn1 = findViewById(button9);
 
 //        Button btn8 = findViewById(R.id.button10);
 //        btn8.setOnClickListener(new View.OnClickListener() {
