@@ -48,6 +48,41 @@ public class MainActivity extends AppCompatActivity {
         }
     };
 
+    View.OnClickListener sluchaczWyniku = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            String tekst = ekran.getText().toString();
+
+            //tniemy tekst na czesci
+            String[] czesci = tekst.split(" ");
+
+            //sprawdzmy czy mamy komplet
+            if(czesci.length == 3) {
+                double liczba1 = Double.parseDouble(czesci[0]);
+                String znak = czesci[1];
+                double liczba2 = Double.parseDouble(czesci[2]);
+                double wynik = 0;
+
+
+                if(znak.equals("+")) wynik = liczba1 + liczba2;
+                else if (znak.equals("-")) wynik = liczba1 - liczba2;
+                else if (znak.equals("*")) wynik = liczba1 * liczba2;
+                else if (znak.equals("/")) {
+                    if(liczba2 == 0) {
+                        ekran.setText("NIE DZIEL PRZEZ ZERO");
+                        return;
+                    } else {
+                        wynik = liczba1 / liczba2;
+                    }
+                }
+
+                ekran.setText(String.valueOf(wynik));
+
+            }
+
+        }
+    };
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
