@@ -51,7 +51,21 @@ public class MainActivity extends AppCompatActivity {
         // polączenie z xml
          ekran = findViewById(R.id.result_tv);
 
-         Button btn1 = findViewById(button9);
+         Button btn1 = findViewById(R.id.button17);
+         Button btn2 = findViewById(R.id.button18);
+         Button btn3 = findViewById(R.id.button19);
+
+        Button btn4 = findViewById(R.id.button13;
+        Button btn5 = findViewById(R.id.button14);
+        Button btn6 = findViewById(R.id.button15);
+
+        Button btn7 = findViewById(R.id.button9);
+        Button btn8 = findViewById(R.id.button10);
+        Button btn9 = findViewById(R.id.button11);
+
+        Button btn0 = findViewById(R.id.button22);
+
+        
 
 //        Button btn8 = findViewById(R.id.button10);
 //        btn8.setOnClickListener(new View.OnClickListener() {
