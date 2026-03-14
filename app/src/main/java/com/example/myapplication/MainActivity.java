@@ -65,7 +65,18 @@ public class MainActivity extends AppCompatActivity {
 
         Button btn0 = findViewById(R.id.button22);
 
-        
+        btn1.setOnClickListener(sluchaczCyfr);
+        btn2.setOnClickListener(sluchaczCyfr);
+        btn3.setOnClickListener(sluchaczCyfr);
+        btn4.setOnClickListener(sluchaczCyfr);
+        btn5.setOnClickListener(sluchaczCyfr);
+        btn6.setOnClickListener(sluchaczCyfr);
+        btn7.setOnClickListener(sluchaczCyfr);
+        btn8.setOnClickListener(sluchaczCyfr);
+        btn9.setOnClickListener(sluchaczCyfr);
+        btn0.setOnClickListener(sluchaczCyfr);
+
+
 
 //        Button btn8 = findViewById(R.id.button10);
 //        btn8.setOnClickListener(new View.OnClickListener() {
