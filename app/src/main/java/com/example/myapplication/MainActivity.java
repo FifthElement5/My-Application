@@ -81,6 +81,10 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+
+
+
+
             }
 
         }
@@ -146,7 +150,13 @@ public class MainActivity extends AppCompatActivity {
        Button btnRowne = findViewById(R.id.button24);
        Button btnClear = findViewById(R.id.button3);
 
+// wyywolanie rownania
        btnRowne.setOnClickListener(sluchaczWyniku);
+//       btnPlus.setOnClickListener(sluchaczWyniku);
+//       btnMinus.setOnClickListener(sluchaczWyniku);
+//       btnMno.setOnClickListener(sluchaczWyniku);
+//       btnDzie.setOnClickListener(sluchaczWyniku);
+
        btnClear.setOnClickListener(sluchaczClear);
 
 
