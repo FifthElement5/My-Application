@@ -78,6 +78,9 @@ public class MainActivity extends AppCompatActivity {
 
                 ekran.setText(String.valueOf(wynik));
 
+
+
+
             }
 
         }
@@ -130,7 +133,7 @@ public class MainActivity extends AppCompatActivity {
         btn9.setOnClickListener(sluchaczCyfr);
         btn0.setOnClickListener(sluchaczCyfr);
 
-       Button  btnPlus = findViewById(R.id.button20);
+       Button btnPlus = findViewById(R.id.button20);
        Button btnMinus = findViewById(R.id.button16);
        Button btnMno = findViewById(R.id.button12);
        Button btnDzie = findViewById(R.id.button8);
@@ -141,7 +144,7 @@ public class MainActivity extends AppCompatActivity {
        btnDzie.setOnClickListener(sluchaczOperacji);
 
        Button btnRowne = findViewById(R.id.button24);
-       Button btnClear = findViewById(R.id.button4);
+       Button btnClear = findViewById(R.id.button3);
 
        btnRowne.setOnClickListener(sluchaczWyniku);
        btnClear.setOnClickListener(sluchaczClear);
