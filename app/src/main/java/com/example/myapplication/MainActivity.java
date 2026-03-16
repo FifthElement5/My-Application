@@ -99,15 +99,26 @@ public class MainActivity extends AppCompatActivity {
 
     View.OnClickListener sluchaczPlusMinus = new View.OnClickListener() {
         @Override
+        @Override
         public void onClick(View v) {
             String tekst = ekran.getText().toString();
-            String[] czesci = tekst.split(" ");
 
-            String minus = czesci[czesci.length - 1];
-            ekran.setText("-" + minus);
+            // Znajduje indeks ostatniej spacji
+            int ostatniaSpacja = tekst.lastIndexOf(" ");
 
+            if (ostatniaSpacja != -1) {
+                // Wszystko OD POCZĄTKU do OSTATNIEJ SPACJI (reszta równania)
+                String pozostalaCzesc = tekst.substring(0, ostatniaSpacja);
 
+                // Ostatni element (to co miałaś w 'minus')
+                String ostatniElement = tekst.substring(ostatniaSpacja + 1);
 
+                // Ustawiasz: reszta + spacja + minus + ostatni element
+                ekran.setText(pozostalaCzesc + " -" + ostatniElement);
+            } else {
+                // Jeśli nie było spacji (jest tylko jedna liczba)
+                ekran.setText("-" + tekst);
+            }
         }
     };
 
