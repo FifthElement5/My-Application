@@ -97,6 +97,17 @@ public class MainActivity extends AppCompatActivity {
         }
     };
 
+    View.OnClickListener sluchaczPlusMinus = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            String tekst = ekran.getText().toString();
+            String[] czesci = tekst.split(" ");
+
+
+
+        }
+    };
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -155,6 +166,9 @@ public class MainActivity extends AppCompatActivity {
 
 
        btnClear.setOnClickListener(sluchaczClear);
+
+       Button btnPlusMinus = findViewById(R.id.button21);
+
 
 
 //        Button btn8 = findViewById(R.id.button10);
