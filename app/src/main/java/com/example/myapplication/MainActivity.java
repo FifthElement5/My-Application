@@ -99,26 +99,46 @@ public class MainActivity extends AppCompatActivity {
 
     View.OnClickListener sluchaczPlusMinus = new View.OnClickListener() {
         @Override
+        public void onClick(View v) {
+            String tekst = ekran.getText().toString();
+            if (tekst.isEmpty()) return; // Zabezpieczenie przed pustym ekranem
+
+            String[] czesci = tekst.split(" ");
+            int ostatniIndeks = czesci.length - 1;
+            String ostatniaLiczba = czesci[ostatniIndeks];
+
+            // Budujemy wynik:
+            String wynik = "";
+            for (int i = 0; i < ostatniIndeks; i++) {
+                wynik += czesci[i] + " "; // Przepisujemy wszystko przed ostatnią liczbą
+            }
+
+            // Na końcu doklejamy minus i tę liczbę
+            if(ostatniaLiczba.matches( "^-.*")){
+                String nowaLiczba = ostatniaLiczba.substring(1);
+              ekran.setText(wynik + nowaLiczba);
+            } else {
+                ekran.setText(wynik + "-" + ostatniaLiczba);
+            }
+        }
+    };
+
+    View.OnClickListener sluchaczPier = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
             String tekst = ekran.getText().toString();
 
-            // Znajduje indeks ostatniej spacji
-            int ostatniaSpacja = tekst.lastIndexOf(" ");
+            String[] czesci = tekst.split(" ");
+            int ostatniIndeks = czesci.length - 1;
 
-            if (ostatniaSpacja != -1) {
-                // Wszystko OD POCZĄTKU do OSTATNIEJ SPACJI (reszta równania)
-                String pozostalaCzesc = tekst.substring(0, ostatniaSpacja);
+            String ostatniaLiczba = czesci[ostatniIndeks];
 
-                // Ostatni element (to co miałaś w 'minus')
-                String ostatniElement = tekst.substring(ostatniaSpacja + 1);
-
-                // Ustawiasz: reszta + spacja + minus + ostatni element
-                ekran.setText(pozostalaCzesc + " -" + ostatniElement);
-            } else {
-                // Jeśli nie było spacji (jest tylko jedna liczba)
-                ekran.setText("-" + tekst);
+            String wynik = "";
+            for (int i = 0; i < ostatniIndeks; i++) {
+                wynik += czesci[i];
             }
+
+
         }
     };
 
