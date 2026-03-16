@@ -135,8 +135,22 @@ public class MainActivity extends AppCompatActivity {
 
             String wynik = "";
             for (int i = 0; i < ostatniIndeks; i++) {
-                wynik += czesci[i];
+                wynik += czesci[i] + " ";
             }
+            double liczba = Double.parseDouble(ostatniaLiczba);
+            double wynikOperacji = 0;
+            // 1. Sprawdzamy, co jest napisane na klikniętym przycisku
+            Button kliknietyGuzik = (Button) v;
+            String nazwaPrzycisku = kliknietyGuzik.getText().toString();
+            if (nazwaPrzycisku.equals("sqrt")) {
+                wynikOperacji = Math.sqrt(liczba);
+            } else if (nazwaPrzycisku.equals("1/x")) {
+                wynikOperacji = 1.0/liczba;
+            } else if (nazwaPrzycisku.equals("%")) {
+                wynikOperacji = liczba/100;
+
+            }
+            ekran.setText(wynik + String.valueOf(wynikOperacji));
 
 
         }
