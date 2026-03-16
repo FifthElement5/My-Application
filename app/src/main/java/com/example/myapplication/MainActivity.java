@@ -218,6 +218,14 @@ public class MainActivity extends AppCompatActivity {
        Button btnPlusMinus = findViewById(R.id.button21);
        btnPlusMinus.setOnClickListener(sluchaczPlusMinus);
 
+       Button btnSqrt = findViewById(R.id.button7);
+       btnSqrt.setOnClickListener(sluchaczPier);
+
+       Button btnPro = findViewById(R.id.button1);
+       btnPro.setOnClickListener(sluchaczPier);
+
+        Button btnula = findViewById(R.id.button5);
+        btnPro.setOnClickListener(sluchaczPier);
 
 
 //        Button btn8 = findViewById(R.id.button10);
