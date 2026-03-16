@@ -258,4 +258,35 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
+    // CZĘŚĆ A: Ta metoda "wstrzykuje" menu na pasek u góry ekranu
+    @Override
+    public boolean onCreateOptionsMenu(android.view.Menu menu) {
+        getMenuInflater().inflate(R.menu.moje_menu, menu);
+        return true;
+    }
+
+    // CZĘŚĆ B: Ta metoda mówi, co ma się stać, gdy klikniesz w About lub Exit
+    @Override
+    public boolean onOptionsItemSelected(android.view.MenuItem item) {
+        int id = item.getItemId();
+
+        if (id == R.id.action_about) {
+            // Okienko z informacją o autorach
+            androidx.appcompat.app.AlertDialog.Builder builder = new androidx.appcompat.app.AlertDialog.Builder(this);
+            builder.setTitle("O autorach");
+            builder.setMessage("Kalkulator stworzony przez: [Twoje Imię i Nazwisko]");
+            builder.setPositiveButton("OK", null);
+            builder.show();
+            return true;
+        }
+
+        if (id == R.id.action_exit) {
+            // Zamykanie aplikacji
+            finish();
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
 }
