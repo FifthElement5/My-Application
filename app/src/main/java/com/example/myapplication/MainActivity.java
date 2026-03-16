@@ -152,10 +152,7 @@ public class MainActivity extends AppCompatActivity {
 
 // wyywolanie rownania
        btnRowne.setOnClickListener(sluchaczWyniku);
-//       btnPlus.setOnClickListener(sluchaczWyniku);
-//       btnMinus.setOnClickListener(sluchaczWyniku);
-//       btnMno.setOnClickListener(sluchaczWyniku);
-//       btnDzie.setOnClickListener(sluchaczWyniku);
+
 
        btnClear.setOnClickListener(sluchaczClear);
 
