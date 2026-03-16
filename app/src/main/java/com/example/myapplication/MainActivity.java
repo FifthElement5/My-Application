@@ -103,6 +103,9 @@ public class MainActivity extends AppCompatActivity {
             String tekst = ekran.getText().toString();
             String[] czesci = tekst.split(" ");
 
+            String minus = czesci[czesci.length - 1];
+            ekran.setText("-" + minus);
+
 
 
         }
@@ -168,6 +171,7 @@ public class MainActivity extends AppCompatActivity {
        btnClear.setOnClickListener(sluchaczClear);
 
        Button btnPlusMinus = findViewById(R.id.button21);
+       btnPlusMinus.setOnClickListener(sluchaczPlusMinus);
 
 
 
