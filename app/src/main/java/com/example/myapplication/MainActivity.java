@@ -209,7 +209,7 @@ public class MainActivity extends AppCompatActivity {
        Button btnRowne = findViewById(R.id.button24);
        Button btnClear = findViewById(R.id.button3);
 
-// wyywolanie rownania
+// wyywolanie rownani
        btnRowne.setOnClickListener(sluchaczWyniku);
        btnClear.setOnClickListener(sluchaczClear);
 
@@ -223,6 +223,9 @@ public class MainActivity extends AppCompatActivity {
        btnPro.setOnClickListener(sluchaczPier);
 
         Button btnula = findViewById(R.id.button5);
+        btnPro.setOnClickListener(sluchaczPier);
+
+        Button btnulaa = findViewById(R.id.button5);
         btnPro.setOnClickListener(sluchaczPier);
 
 
