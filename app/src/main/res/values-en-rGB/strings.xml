@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Calculator</string>
+    <string name="result_default">0</string>
+    <string name="btn_percent">%</string>
+    <string name="btn_ce">CE</string>
+    <string name="btn_c">C</string>
+    <string name="btn_back">Back</string>
+    <string name="btn_inv">1/x</string>
+    <string name="btn_sqr">x²</string>
+    <string name="btn_sqrt">sqrt</string>
+    <string name="btn_div">/</string>
+    <string name="btn_mul">*</string>
+    <string name="btn_sub">-</string>
+    <string name="btn_add">+</string>
+    <string name="btn_plus_minus">+/-</string>
+    <string name="btn_comma">,</string>
+    <string name="btn_equal">=</string>
+</resources>
