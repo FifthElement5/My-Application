@@ -211,8 +211,6 @@ public class MainActivity extends AppCompatActivity {
 
 // wyywolanie rownania
        btnRowne.setOnClickListener(sluchaczWyniku);
-
-
        btnClear.setOnClickListener(sluchaczClear);
 
        Button btnPlusMinus = findViewById(R.id.button21);
